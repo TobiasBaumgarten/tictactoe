@@ -1,10 +1,52 @@
 .container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 0.1em;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0.1em;
+  margin: 0 auto;
+  max-width: 410px;
+  align-items: center;
+  justify-content: center;
 }
 
-/* [class^="box-"] {
-    background-color: blue;
-} */
+[class^="box-"] {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  height: 40%;
+  width: 40%;
+  border: 20px solid blue;
+  border-radius: 50%;
+}
+
+.cross {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+ }
+ 
+ .cross:before, .cross:after {
+   content: "";
+   position: absolute;
+   background: #d00;
+ }
+ 
+ .cross:before {
+   left: 55%;
+   width: 20%;
+   margin-left: -15%;
+   height: 100%;
+   transform: rotate(45deg);
+ }
+ 
+ .cross:after {
+   top: 55%;
+   height: 20%;
+   margin-top: -15%;
+   width: 100%;
+   transform: rotate(45deg);
+ }
+ 
